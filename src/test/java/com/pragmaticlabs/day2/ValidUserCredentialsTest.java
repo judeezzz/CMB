@@ -5,10 +5,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class HelloSelenium {
+public class ValidUserCredentialsTest {
 
     private WebDriver driver;
 
@@ -30,7 +29,6 @@ public class HelloSelenium {
         driver.quit();
     }
 
-
     @Test
     public void helloSelenium(){
 
@@ -46,10 +44,8 @@ public class HelloSelenium {
         //Click the login
         driver.findElement(By.id("login-button")).click();
 
-
         //Verify/check the label in the login page
         //Assert.assertEquals(driver.findElement(By.cssSelector("span.title")).getText(),"Products");
-
 
     }
 

@@ -24,6 +24,9 @@ public class ChromeTest {
     public void beforeMethod(){
         //Open a web browser(Chrome browser)
         driver = new ChromeDriver();
+
+        //Navigate to the login screen(Type URL https://www.saucedemo.com/v1/)
+        driver.get("https://www.saucedemo.com/v1/");
     }
 
     @AfterMethod
@@ -35,9 +38,6 @@ public class ChromeTest {
 
     @Test
     public void helloSelenium(){
-
-        //Navigate to the login screen(Type URL https://www.saucedemo.com/v1/)
-        driver.get("https://www.saucedemo.com/v1/");
 
         //Type username "standard_user"
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
